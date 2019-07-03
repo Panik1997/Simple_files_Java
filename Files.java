@@ -11,7 +11,7 @@ public class Files {
         int[] new_tab = new int[10];
         int tmp;
         for (int i = 0; i < new_tab.length; i++) {
-            if( scanner.hasNextInt()){
+            if(scanner.hasNextInt()){
                 break;
             }
             tmp = scanner.nextInt();
@@ -21,7 +21,8 @@ public class Files {
     }
 
     public static void doPliku(int[] tab) {
-        try{File file = new File("text.txt");
+        try{
+            File file = new File("text.txt");
             FileWriter filewrite = new FileWriter(file, true);
             for (int k = 0; k < 10; k++) {
                 filewrite.write(tab[k] + "\n");
